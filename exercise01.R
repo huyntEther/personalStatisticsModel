@@ -1,4 +1,4 @@
-playBill<-read.csv('Advertising.csv', header = TRUE, sep = ",")
+playBill<-read.csv('datasource\\playbill.csv', header = TRUE, sep = ",")
 #sumarize
 dim(playBill)
 summary(playBill)

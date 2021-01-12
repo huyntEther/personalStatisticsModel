@@ -1,0 +1,10 @@
+invoices<-read.table('datasource\\invoices.txt', header = TRUE, sep = "\t")
+head(invoices)
+summary(invoices)
+invoices[1:5,]
+# plot(invoices)
+plot(invoices$Invoices,invoices$Time)
+# Ma <- lm(invoices$Invoices ~ invoices$Time)
+# summary(Ma)
+Mb <- lm(invoices$Time~invoices$Invoices )
+summary(Mb)
