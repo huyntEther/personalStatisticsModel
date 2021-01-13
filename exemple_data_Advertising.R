@@ -4,12 +4,7 @@
 #dev.off ()
 
 #Advertising<-read.csv(file.choose(), header = TRUE, sep = ",")
-Advertising<-read.csv('Advertising.csv', header = TRUE, sep = ",")
-
-#Advertising <- read.table(file = "Advertising.csv", header = TRUE, sep = ",")
-dim(Advertising)
-Advertising[1:5,]
-summary(Advertising)
+                                                                                                                                                                                                   
 plot(Advertising)
 
 M1 <- lm(Advertising$sales ~ Advertising$TV)

@@ -1,1 +1,5 @@
-idct<-read.csv('Advertising.csv', header = TRUE, sep = ",")
+idct<-read.table('dataSource\\indicators.txt', header = TRUE, sep = '\t')
+head(idct)
+m2 <- lm(PriceChange ~ LoanPaymentsOverdue,data = idct)
+summary(m2)
+predict.lm(m2, data.frame(LoanPaymentsOverdue=c(4)), interval = "confidence", level = 0.95)
