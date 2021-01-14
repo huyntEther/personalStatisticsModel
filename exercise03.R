@@ -18,7 +18,7 @@ pvalue3b <- 2*pt(b1-b1thesis/seb1,n-2)
 cat(pvalue3b)
 #3b
 #x  = data.frame(Invoices=c(130,130))
-#predict.lm(M3,x,interval = "confidence", level = 0.95)
+#predict.lm(M3,data.frame(Invoices=c(130)),interval = "prediction", level = 0.95)
 
 xstar = 130
 modelSigma <- M3smr$sigma
