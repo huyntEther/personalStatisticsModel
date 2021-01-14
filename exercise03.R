@@ -10,6 +10,7 @@ M3smr<-summary(M3)
 n <-length(M3$residuals)
 b0<-summary(M3)$coefficients[1,1]
 b1<-summary(M3)$coefficients[2,1]
+confint(M3,level=0.95)
 #3b
 seb1 <-summary(M3)$coefficients[2,2]
 b1thesis <- 0.01

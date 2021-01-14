@@ -1,14 +1,16 @@
 playBill<-read.csv('datasource\\playbill.csv', header = TRUE, sep = ",")
 #sumarize
-dim(playBill)
-summary(playBill)
-head(playBill)
-playBill[1:5,]
+# dim(playBill)
+# summary(playBill)
+# head(playBill)
+# playBill[1:5,]
 #plot(playBill)
 #1a
 M1 <- lm(CurrentWeek ~ LastWeek, data = playBill)
 M1smr <- summary(M1)
 M1smr
+confint(M1,level=0.95)
+n <-length(M1$residuals)
 b0<-summary(M1)$coefficients[1,1]
 b1<-summary(M1)$coefficients[2,1]
 b1thesis <- 1
